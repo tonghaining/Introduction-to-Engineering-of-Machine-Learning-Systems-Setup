@@ -86,4 +86,10 @@ Steps:
 
 3. Click on the green "><" icon in the bottom-left corner of VS Code. Select "Remote-SSH: Connect to Host..." and choose `local-mlops` from the list. **NOTE: choose `local-mlops`, not `remote-mlops`.**
 
-4. Once connected, open the folder `/home/student/Introduction-to-Engineering-of-Machine-Learning-Systems` to access the course materials. You are now ready to explore the notebooks, run MLflow experiments, and work with the MLOps platform.
+4. Once connected, open the folder `/home/student/Introduction-to-Engineering-of-Machine-Learning-Systems` to access the course materials. 
+
+5. When running a code cell for the first time, VS Code will ask you to choose a Python interpreter.
+Select:
+**Python Environments** → `mlops_eng`
+
+6. You're all set! You can now explore the notebooks, run MLflow experiments, and work with the full MLOps platform.
