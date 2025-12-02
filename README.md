@@ -15,8 +15,8 @@ To simplify connecting to the remote virtual machines (VMs) and forwarding ports
       - On Windows, open the file located at  `C:\Users\<your-username>\.ssh\config` using a text editor like Notepad.
    2. Add the following entries (replace the IPs and key path):
       ```
-      Host local-mlops
-         HostName <local-vm-ip>
+      Host client-mlops
+         HostName <client-vm-ip>
          User student
          IdentityFile <path-to-private-key>
 
@@ -61,7 +61,7 @@ Steps:
 
 2. Install the Remote - SSH extension (if not already installed).
 
-3. Click on the green "><" icon in the bottom-left corner of VS Code. Select "Remote-SSH: Connect to Host..." and choose `local-mlops` from the list. **NOTE: choose `local-mlops`, not `remote-mlops`.**
+3. Click on the green "><" icon in the bottom-left corner of VS Code. Select "Remote-SSH: Connect to Host..." and choose `client-mlops` from the list. **NOTE: choose `client-mlops`, not `remote-mlops`.**
 
 4. Once connected, open the folder `/home/student/Introduction-to-Engineering-of-Machine-Learning-Systems` to access the course materials. 
 
