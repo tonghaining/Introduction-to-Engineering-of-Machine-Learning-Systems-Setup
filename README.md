@@ -40,15 +40,15 @@ To simplify connecting to the remote virtual machines (VMs) and forwarding ports
 Next, you need to establish an SSH connection with port forwarding so that your local machine can access the remote MLflow service.
 
 ### Connect using the **Remote** SSH alias
-- On Linux/macOS/Windows (PowerShell):
+- On Linux/macOS/Windows (PowerShell):  (Note, it will "hang", saying nothing when it works as intended)
   ```bash
   ssh -N remote-mlops
   ```
 
 This command will:
 - Use the SSH alias remote-mlops from your ~/.ssh/config.
-- Forward MLflow ports on the remote MLflow server to localhost.
-- Keep the SSH session open while you work with the MLflow web UI.
+- Forward MLflow ports on the remote MLflow server to your localhost.
+- Keep this SSH session open while you work with the MLflow web UI.
 
 You can now access MLflow (`http://127.0.0.1:5000`) and the MLflow Tracking UI (`http://127.0.0.1:9000`) and MLflow Model Registry UI (`http://127.0.0.1:9001`) on your local machine via your web browser.
 
