@@ -43,19 +43,22 @@ add_or_replace_host() {
 # Prepare entries
 LOCAL_ENTRY="Host local-mlops
     HostName $LOCAL_VM_IP
-    User ubuntu
+    User student
     IdentityFile $KEY_PATH
 "
 
 REMOTE_ENTRY="Host remote-mlops
     HostName $REMOTE_VM_IP
-    User ubuntu
+    User student
     IdentityFile $KEY_PATH
+    LocalForward 5000 127.0.0.1:5000
+    LocalForward 9000 127.0.0.1:9000
+    LocalForward 9001 127.0.0.1:9001
 "
 
 REMOTE_JUMP_ENTRY="Host remote-mlops-jump
     HostName $REMOTE_VM_IP
-    User ubuntu
+    User student
     ProxyJump local-mlops
 "
 

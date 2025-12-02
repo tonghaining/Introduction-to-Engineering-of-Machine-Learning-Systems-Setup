@@ -31,6 +31,9 @@ Host remote-mlops
     HostName $RemoteIP
     User ubuntu
     IdentityFile $KeyPath
+    LocalForward 5000 127.0.0.1:5000
+    LocalForward 9000 127.0.0.1:9000
+    LocalForward 9001 127.0.0.1:9001
 
 Host remote-mlops-jump
     HostName $RemoteIP
