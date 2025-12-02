@@ -56,16 +56,9 @@ REMOTE_ENTRY="Host remote-mlops
     LocalForward 9001 127.0.0.1:9001
 "
 
-REMOTE_JUMP_ENTRY="Host remote-mlops-jump
-    HostName $REMOTE_VM_IP
-    User student
-    ProxyJump local-mlops
-"
-
 # Add entries
 add_or_replace_host "local-mlops" "$LOCAL_ENTRY"
 add_or_replace_host "remote-mlops" "$REMOTE_ENTRY"
-add_or_replace_host "remote-mlops-jump" "$REMOTE_JUMP_ENTRY"
 
 echo "SSH config updated successfully."
 
@@ -74,4 +67,4 @@ echo "Refreshing terminal environment..."
 eval "$(ssh-agent -s)"
 ssh-add "$KEY_PATH"
 
-echo "You can now use 'ssh local-mlops', 'ssh remote-mlops', or 'ssh remote-mlops-jump'."
+echo "You can now use 'ssh local-mlops', 'ssh remote-mlops' to connect."

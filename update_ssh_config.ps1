@@ -24,21 +24,16 @@ Write-Host "Updating SSH config at $configFile..."
 $entries = @"
 Host local-mlops
     HostName $LocalIP
-    User ubuntu
+    User student
     IdentityFile $KeyPath
 
 Host remote-mlops
     HostName $RemoteIP
-    User ubuntu
+    User student
     IdentityFile $KeyPath
     LocalForward 5000 127.0.0.1:5000
     LocalForward 9000 127.0.0.1:9000
     LocalForward 9001 127.0.0.1:9001
-
-Host remote-mlops-jump
-    HostName $RemoteIP
-    User ubuntu
-    ProxyJump local-mlops
 "@
 
 # Remove existing lines for these hosts
@@ -46,7 +41,7 @@ $existingLines = @()
 if (Test-Path $configFile) {
     $skip = $false
     foreach ($line in Get-Content $configFile) {
-        if ($line -match '^Host (local-mlops|remote-mlops|remote-mlops-jump)$') {
+        if ($line -match '^Host (local-mlops|remote-mlops)$') {
             $skip = $true
             continue
         }
@@ -64,4 +59,4 @@ Write-Host "Adding key to ssh-agent..."
 Start-Service ssh-agent -ErrorAction SilentlyContinue
 ssh-add $KeyPath
 
-Write-Host "You can now use 'ssh local-mlops', 'ssh remote-mlops', or 'ssh remote-mlops-jump'."
+Write-Host "You can now use 'ssh local-mlops', 'ssh remote-mlops' to connect."

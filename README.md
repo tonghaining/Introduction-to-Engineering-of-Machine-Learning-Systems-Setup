@@ -28,7 +28,7 @@ This script will updates your `~/.ssh/config` with three host entries:
    - remote-mlops-jump
    Connects to the remote VM through the local VM using ProxyJump.
 
-If the Script Fails: Manual Setup
+If the Script Fails (missing admin privileges): Manual Setup
    0. On Linux/Mac `chmod 600 <path_to_private_key_file>`
    1. Open the SSH config file:
       - On Linux/macOS:
@@ -50,11 +50,6 @@ If the Script Fails: Manual Setup
          LocalForward 5000 127.0.0.1:5000
          LocalForward 9000 127.0.0.1:9000
          LocalForward 9001 127.0.0.1:9001
-
-      Host remote-mlops-jump
-         HostName <remote-vm-ip>
-         User student
-         ProxyJump local-mlops
       ```
    3. Save and exit.
 
