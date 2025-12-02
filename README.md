@@ -29,6 +29,7 @@ This script will updates your `~/.ssh/config` with three host entries:
    Connects to the remote VM through the local VM using ProxyJump.
 
 If the Script Fails: Manual Setup
+   0. On Linux/Mac `chmod 600 <path_to_private_key_file>`
    1. Open the SSH config file:
       - On Linux/macOS:
          ```bash
