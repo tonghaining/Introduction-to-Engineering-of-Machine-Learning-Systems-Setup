@@ -60,13 +60,19 @@ Steps:
 1. Open VS Code on your local laptop.
 
 2. Install the Remote - SSH extension (if not already installed).
+![plugin installation](./images/install_explorer.png)
 
 3. Click on the green "><" icon in the bottom-left corner of VS Code. Select "Remote-SSH: Connect to Host..." and choose `client-mlops` from the list. **NOTE: choose `client-mlops`, not `remote-mlops`.**
+![remote ssh connect](./images/select_remote.png)
 
 4. Once connected, open the folder `/home/student/Introduction-to-Engineering-of-Machine-Learning-Systems` to access the course materials. 
+![remote_explorer](./images/remote_explorer.png)
+![open_folder](./images/open_folder.png)
 
 5. When running a code cell for the first time, VS Code will ask you to choose a Python interpreter.
 Select:
 **Python Environments** → `mlops_eng`
+![select_python_env](./images/python_env.png)
+![select_mlops_env](./images/mlops_eng.png)
 
 6. You're all set! You can now explore the notebooks, run MLflow experiments, and work with the full MLOps platform.
