@@ -17,7 +17,7 @@ To make connecting easier, update your SSH configuration using the provided scri
       ./update_ssh_config.ps1 <local-vm-ip> <remote-vm-ip> <path-to-private-key>
       ```
 
-This script will updates your ~/.ssh/config with three host entries:
+This script will updates your `~/.ssh/config` with three host entries:
 
    - local-mlops
    Connects directly to the local VM using the provided private key.
