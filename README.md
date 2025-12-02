@@ -5,37 +5,14 @@
 ---
 
 ## 1. Update ssh config
-
-To make connecting easier, update your SSH configuration using the provided script:
-
-   - On Linux/macOS:
-      ```bash
-      ./update_ssh_config.sh <local-vm-ip> <remote-vm-ip> <path-to-private-key>
-      ```
-   - On Windows:
-      ```bash
-      ./update_ssh_config.ps1 <local-vm-ip> <remote-vm-ip> <path-to-private-key>
-      ```
-
-This script will updates your `~/.ssh/config` with three host entries:
-
-   - local-mlops
-   Connects directly to the local VM using the provided private key.
-
-   - remote-mlops
-   Connects directly to the remote VM using the same key. It also sets up local port forwarding for MLflow ports (5000, 9000, 9001).
-
-   - remote-mlops-jump
-   Connects to the remote VM through the local VM using ProxyJump.
-
-If the Script Fails (missing admin privileges): Manual Setup
+To simplify connecting to the remote virtual machines (VMs) and forwarding ports for MLflow, you need to update your SSH configuration file (`~/.ssh/config`).
    0. On Linux/Mac `chmod 600 <path_to_private_key_file>`
    1. Open the SSH config file:
       - On Linux/macOS:
          ```bash
          nano ~/.ssh/config
          ```
-      - On Windows, open the file located at  `~\.ssh\config`
+      - On Windows, open the file located at  `C:\Users\<your-username>\.ssh\config` using a text editor like Notepad.
    2. Add the following entries (replace the IPs and key path):
       ```
       Host local-mlops
