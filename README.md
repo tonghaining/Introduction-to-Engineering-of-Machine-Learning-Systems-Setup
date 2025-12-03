@@ -62,7 +62,13 @@ Steps:
 2. Install the Remote - SSH extension (if not already installed).
 ![plugin installation](./images/install_explorer.png)
 
-3. Click on the green "><" icon in the bottom-left corner of VS Code. Select "Remote-SSH: Connect to Host..." and choose `client-mlops` from the list. **NOTE: choose `client-mlops`, not `remote-mlops`.**
+3. **Update:** Try on your terminal first to ensure connectivity:
+   ```bash
+   ssh client-mlops
+   ```
+   It will ask whether to accept the host key, type `yes` and hit enter. You should then be logged into the remote VM.
+
+Click on the green "><" icon in the bottom-left corner of VS Code. Select "Remote-SSH: Connect to Host..." and choose `client-mlops` from the list. **NOTE: choose `client-mlops`, not `remote-mlops`.**
 ![remote ssh connect](./images/select_remote.png)
 
 4. Once connected, open the folder `/home/student/Introduction-to-Engineering-of-Machine-Learning-Systems` to access the course materials. 
