@@ -24,7 +24,7 @@ To simplify connecting to the remote virtual machines (VMs) and forwarding ports
          HostName <remote-vm-ip>
          User student
          IdentityFile <path-to-private-key>
-         LocalForward 5000 127.0.0.1:5000
+         LocalForward 5001 127.0.0.1:5000
          LocalForward 9000 127.0.0.1:9000
          LocalForward 9001 127.0.0.1:9001
       ```
@@ -50,7 +50,7 @@ This command will:
 - Forward MLflow ports on the remote MLflow server to your localhost.
 - Keep this SSH session open while you work with the MLflow web UI.
 
-You should now be able to access MLflow via your local browser at `http://127.0.0.1:5000`. Additionally the URLs MLflow Tracking UI (`http://127.0.0.1:9000`) and MLflow Model Registry UI (`http://127.0.0.1:9001`) should load even if they don't log in.
+You should now be able to access MLflow via your local browser at `http://127.0.0.1:5001`. Additionally the URLs MLflow Tracking UI (`http://127.0.0.1:9000`) and MLflow Model Registry UI (`http://127.0.0.1:9001`) should load even if they don't log in.
 
 
 ## 3. Open VS Code with Remote-SSH
