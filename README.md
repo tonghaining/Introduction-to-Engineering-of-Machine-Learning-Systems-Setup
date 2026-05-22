@@ -50,7 +50,7 @@ This command will:
 - Forward MLflow ports on the remote MLflow server to your localhost.
 - Keep this SSH session open while you work with the MLflow web UI.
 
-You can now access MLflow (`http://127.0.0.1:5000`) and the MLflow Tracking UI (`http://127.0.0.1:9000`) and MLflow Model Registry UI (`http://127.0.0.1:9001`) on your local machine via your web browser.
+You should now be able to access MLflow via your local browser at `http://127.0.0.1:5000`. Additionally the URLs MLflow Tracking UI (`http://127.0.0.1:9000`) and MLflow Model Registry UI (`http://127.0.0.1:9001`) should load even if they don't log in.
 
 
 ## 3. Open VS Code with Remote-SSH
