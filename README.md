@@ -60,7 +60,7 @@ Steps:
 1. Open VS Code on your local laptop.
 
 2. Install the Remote - SSH extension (if not already installed).
-![plugin installation](./images/install_explorer.png)
+![plugin installation](./images/install_ssh.png)
 
 3. **Update:** Try on your terminal first to ensure connectivity:
    ```bash
