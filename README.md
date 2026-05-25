@@ -24,7 +24,7 @@ To simplify connecting to the remote virtual machines (VMs) and forwarding ports
          HostName <remote-vm-ip>
          User student
          IdentityFile <path-to-private-key>
-         LocalForward 5001 127.0.0.1:5000
+         LocalForward 5001 127.0.0.1:5001
          LocalForward 9000 127.0.0.1:9000
          LocalForward 9001 127.0.0.1:9001
       ```
